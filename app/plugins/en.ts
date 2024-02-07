@@ -5,7 +5,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     name: "WebSearch",
     toolName: "web-search",
     lang: "en",
-    description: "Web search function tool for search engines.",
+    description: "Web search tool.",
     builtin: true,
     createdAt: 1693744292000,
     enable: true,
@@ -16,7 +16,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "calculator",
     lang: "en",
     description:
-      "The Calculator class is a tool used to evaluate mathematical expressions. It extends the base Tool class.",
+      "Evaluates expressions, extends Tool.",
     builtin: true,
     createdAt: 1693744292000,
     enable: true,
@@ -27,7 +27,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "web-browser",
     lang: "en",
     description:
-      "A class designed to interact with web pages, either to extract information from them or to summarize their content.",
+      "Extracts info or summarizes content.",
     builtin: true,
     createdAt: 1693744292000,
     enable: true,
@@ -38,7 +38,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "WikipediaQueryRun",
     lang: "en",
     description:
-      "A tool for interacting with and fetching data from the Wikipedia API.",
+      "Wikipedia API interaction tool.",
     builtin: true,
     createdAt: 1694235989000,
     enable: false,
@@ -49,7 +49,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "dalle_image_generator",
     lang: "en",
     description:
-      "DALL·E 2 is an AI system that can create realistic images and art from a description in natural language. Using this plugin requires configuring Cloudflare R2 object storage service.",
+      "Generates images with Cloudflare R2.",
     builtin: true,
     createdAt: 1694703673000,
     enable: false,
@@ -60,7 +60,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "stable_diffusion_image_generator",
     lang: "en",
     description:
-      "Stable Diffusion text-to-image model. Using this plugin requires configuring Cloudflare R2 object storage service and stable-diffusion-webui API.",
+      "Diffusion model with Cloudflare R2.",
     builtin: true,
     createdAt: 1688899480510,
     enable: false,
@@ -70,7 +70,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     name: "Arxiv",
     toolName: "arxiv",
     lang: "en",
-    description: "Arxiv search and get the article information.",
+    description: "ArXiv article information retrieval.",
     builtin: true,
     createdAt: 1699265115000,
     enable: false,
@@ -81,7 +81,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "pdf-browser",
     lang: "en",
     description:
-      "A class designed to interact with pdf file, extract information from the URL of a PDF file or summarize its content.",
+      "Extracts info, summarizes content.",
     builtin: true,
     createdAt: 1700907315000,
     enable: false,
@@ -92,7 +92,7 @@ export const EN_PLUGINS: BuiltinPlugin[] = [
     toolName: "wolfram_alpha_llm",
     lang: "en",
     description:
-      "Useful for when you need to answer questions about Math, Science, Technology, Culture, Society and Everyday Life.",
+      "Answers questions on various topics.",
     builtin: true,
     createdAt: 1703846656000,
     enable: false,
