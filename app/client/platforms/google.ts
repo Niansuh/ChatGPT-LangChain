@@ -13,15 +13,7 @@ import {
   LLMUsage,
 } from "../api";
 import { useAccessStore, useAppConfig, useChatStore } from "@/app/store";
-import {
-  EventStreamContentType,
-  fetchEventSource,
-} from "@fortaine/fetch-event-source";
-import { prettyObject } from "@/app/utils/format";
-import { getClientConfig } from "@/app/config/client";
-import Locale from "../../locales";
-import { getServerSideConfig } from "@/app/config/server";
-import de from "@/app/locales/de";
+
 export class GeminiProApi implements LLMApi {
   toolAgentChat(options: AgentChatOptions): Promise<void> {
     throw new Error("Method not implemented.");
