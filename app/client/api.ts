@@ -137,7 +137,7 @@ export class ClientApi {
         {
           from: "human",
           value:
-            "Share from [NextChat]: https://github.com/Niansuh/ChatGPT-LangChain",
+            "Share from [ChatGPT | Niansuh]: https://github.com/Niansuh/ChatGPT-Langchain",
         },
       ]);
     // 敬告二开开发者们，为了开源大模型的发展，请不要修改上述消息，此消息用于后续数据清洗使用
@@ -171,7 +171,7 @@ export function getHeaders(ignoreHeaders?: boolean) {
   const accessStore = useAccessStore.getState();
   let headers: Record<string, string> = {};
   const modelConfig = useChatStore.getState().currentSession().mask.modelConfig;
-  const isGoogle = modelConfig.model === "gemini-pro";
+  const isGoogle = modelConfig.model.startsWith("gemini");
   if (!ignoreHeaders && !isGoogle) {
     headers = {
       "Content-Type": "application/json",
