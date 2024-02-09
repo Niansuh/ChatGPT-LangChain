@@ -307,7 +307,7 @@ export function PreviewActions(props: {
     setShouldExport(false);
 
     var api: ClientApi;
-    if (config.modelConfig.model === "gemini-pro") {
+    if (config.modelConfig.model.startsWith("gemini")) {
       api = new ClientApi(ModelProvider.GeminiPro);
     } else {
       api = new ClientApi(ModelProvider.GPT);
@@ -540,7 +540,7 @@ export function ImagePreviewer(props: {
           <div>
             <div className={styles["main-title"]}>ChatGPT | Niansuh</div>
             <div className={styles["sub-title"]}>
-              github.com/Niansuh/ChatGPT-Langchian
+              github.com/Niansuh/ChatGPT-LangChain
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
