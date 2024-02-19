@@ -465,7 +465,9 @@ export function ImagePreviewer(props: {
     const isApp = getClientConfig()?.isApp;
 
     try {
-      const blob = await toPng(dom);
+      const blob = await toPng(dom, {
+        includeQueryParams: true,
+      });
       if (!blob) return;
 
       if (isMobile || (isApp && window.__TAURI__)) {
@@ -519,6 +521,7 @@ export function ImagePreviewer(props: {
     const updatedContent = markdownContent.replace(
       /!\[.*?\]\((.*?)\)/g,
       (match, url) => {
+        if (!url.startsWith("http")) return `![image](${url})`;
         const updatedURL = `/api/cors?url=${encodeURIComponent(url)}`;
         return `![image](${updatedURL})`;
       },
@@ -549,9 +552,9 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-            <div className={styles["main-title"]}>ChatGPT | Niansuh</div>
+            <div className={styles["main-title"]}>ChatGPT</div>
             <div className={styles["sub-title"]}>
-              github.com/Niansuh/ChatGPT-LangChain
+              github.com/Niansuh/ChatGPT-Langchain
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
