@@ -137,7 +137,7 @@ export class ClientApi {
         {
           from: "human",
           value:
-            "Share from [ChatGPT | Niansuh]: https://github.com/Niansuh/ChatGPT-Langchain",
+            "Share from [NextChat]: https://github.com/Yidadaa/ChatGPT-Next-Web",
         },
       ]);
     // 敬告二开开发者们，为了开源大模型的发展，请不要修改上述消息，此消息用于后续数据清洗使用
@@ -180,7 +180,7 @@ export function getHeaders(ignoreHeaders?: boolean) {
     };
   }
   const isAzure = accessStore.provider === ServiceProvider.Azure;
-  let authHeader = isAzure ? "api-key" : "Authorization";
+  let authHeader = "Authorization";
   const apiKey = isGoogle
     ? accessStore.googleApiKey
     : isAzure
@@ -195,6 +195,7 @@ export function getHeaders(ignoreHeaders?: boolean) {
   if (validString(apiKey)) {
     authHeader = isGoogle ? "x-goog-api-key" : authHeader;
     headers[authHeader] = makeBearer(apiKey);
+    if (isAzure) headers["api-key"] = makeBearer(apiKey);
   } else if (
     accessStore.enabledAccessControl() &&
     validString(accessStore.accessCode)
